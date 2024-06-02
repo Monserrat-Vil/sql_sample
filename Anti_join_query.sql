@@ -17,6 +17,4 @@ FROM customer
 	ON payment.rental_id = rental.rental_id
 	AND payment.customer_id = customer.customer_id
 WHERE payment.rental_id is null
--- Now you use ANTI JOIN by adding a null condition. 
--- Only return those records where data does not exist. 
 ORDER BY rental.rental_date
